@@ -2,12 +2,7 @@ import UIKit
 import CoreData
 
 
-
-
 class NotesListViewController: UIViewController {
-    
-    
-    
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -51,7 +46,7 @@ class NotesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        title = "Notas"
+        title = "Notes"
         
         let addButtonItem = UIBarButtonItem(barButtonSystemItem: .add
             , target: self, action: #selector(addNote))
@@ -109,3 +104,4 @@ extension NotesListViewController: NoteDetailsViewControllerProtocol {
         notes = (notebook.notes?.array as? [Note]) ?? []
     }
 }
+
