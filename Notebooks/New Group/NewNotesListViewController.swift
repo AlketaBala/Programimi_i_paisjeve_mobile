@@ -38,7 +38,7 @@ class NewNotesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Notas"
+        title = "Notes"
         self.view.backgroundColor = .white
         
         let nib = UINib(nibName: "NotesListCollectionViewCell", bundle: nil)
@@ -91,15 +91,15 @@ class NewNotesListViewController: UIViewController {
                 }
                 
             } else {
-                print("no podemos exportar la data")
+                print("we couldnt export the data ")
             }
         }
         
     }
     
     private func showExportFinishedAlert(_ exportPath: String) {
-        let message = "El archivo CSV se encuentra en \(exportPath)"
-        let alertController = UIAlertController(title: "Exportacion terminada", message: message, preferredStyle: .alert)
+        let message = "The CSV file is located in  \(exportPath)"
+        let alertController = UIAlertController(title: "Exportacion", message: message, preferredStyle: .alert)
         let dismissAction = UIAlertAction(title: "Dismiss", style: .default)
         alertController.addAction(dismissAction)
         
